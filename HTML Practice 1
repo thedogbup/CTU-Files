@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lecture 1</title>
+    <style>
+      html {
+        color: #6B8E23;
+        background-color: #191970;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>im a large heading</h1>
+      <h2>smaller</h2>
+      <h3>still smaller</h3>
+      <a href="www.msn.com">who uses msn </a>
+      <br>
+      <i>italy</i>
+      <br>
+      <b>impact font meme</b>
+      <br>
+      <strong>stronk</strong>
+      <br>
+      <button><a href="www.msn.com">who uses msn </a></button>
+      <br>
+      <img src="https://i.pinimg.com/originals/78/09/eb/7809eb1b3fa195a5ba5829c03c1b180b.png" alt="linux rules!" width="100px">
+    </main>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+
+    <ol>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ol>
+
+    <dl>
+      <dt>eggs</dt>
+      <dd>a product produced by chickens</dd>
+    </dl>
+    <section>
+      <article>breaking news</article>
+      <aside>literary aside</aside>
+    </section>
+    <footer>fin</footer>
+  </body>
+</html>
