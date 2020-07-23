@@ -1,0 +1,1 @@
+out = importdata('data2.txt', ' ', 1)
