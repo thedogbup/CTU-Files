@@ -1,3 +1,5 @@
-1 WebDev  45
-2 Mikdore 323
-3 Sathya  127
+Data1
+ID, Name, Value
+1, WebDev , 45
+2, Mikdore, 323
+3, Sathya , 127
