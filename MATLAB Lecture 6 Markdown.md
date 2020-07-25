@@ -340,8 +340,6 @@ With scripting and file handling, you can now work on large amounts of data, gat
 
 [1]: https://www.mathworks.com/help/matlab/ref/importdata.html
 
-\[2\]: Sorry the text wrapped.
-
 [3]: https://octave.sourceforge.io/octave/function/importdata.html
 
 [4]: https://www.mathworks.com/help/matlab/ref/importdata.html
