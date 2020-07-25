@@ -14,7 +14,7 @@ If you have raw data in a text file or string, you can use the `textscan` method
 
 #### Command Window
 ```
->> nums = ‘1.0 2.56 3.5 4’;
+>> nums = '1.0 2.56 3.5 4';
 >> textscan(nums, ‘%f’)
 ans =
 {
@@ -37,9 +37,9 @@ Mikdore 2  323
 Sathya  3  127
 ```
 #### ReadText.m
-```
+```matlab
 str = fopen('data1.txt');
-out = textscan (str, ‘%d %s %d’)
+out = textscan (str, '%d %s %d')
 fclose('all');
 ```
 #### Output
@@ -86,7 +86,7 @@ Day1  Day2  Day3  Day4  Day5  Day6  Day7
 89.13 44.47 17.63 89.36 13.89 19.88 46.60
 ```
 #### ImportNums.m
-```
+```matlab
 out = importdata('data2.txt', ' ', 1)
 ```
 #### Output
@@ -200,7 +200,7 @@ In Octave, `-text` will force it to read files in Octave’s file format, and `-
 This program will create some variables, store some of them, and retrieve them.
 
 #### SaveNLoad.m
-```
+```matlab
 clear;
 
 a = 'Heads, '
