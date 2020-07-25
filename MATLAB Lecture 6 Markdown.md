@@ -14,60 +14,60 @@ If you have raw data in a text file or string, you can use the `textscan` method
 
 #### Command Window
 ```
-	>> nums = ‘1.0 2.56 3.5 4’;
-	>> textscan(nums, ‘%f’)
-	ans =
-	{
-		[1,1] =
-		
-		1.0000
-		2.5600
-		3.5000
-		4.0000
-		
-	}
+>> nums = ‘1.0 2.56 3.5 4’;
+>> textscan(nums, ‘%f’)
+ans =
+{
+	[1,1] =
+
+	1.0000
+	2.5600
+	3.5000
+	4.0000
+
+}
 ```
 Using the format `%f`, `textscan` will save each number into a cell array with doubles.  
 You can also import data other than numbers using `textscan`. In this case, I am given a text file with numbers and strings: 
 
 #### Input File (data1.txt)
 ```
-	WebDev  1  45
-	Mikdore 2  323
-	Sathya  3  127
+WebDev  1  45
+Mikdore 2  323
+Sathya  3  127
 ```
 #### ReadText.m
 ```
-	str = fopen('data1.txt');
-	out = textscan (str, ‘%d %s %d’)
-	fclose('all');
+str = fopen('data1.txt');
+out = textscan (str, ‘%d %s %d’)
+fclose('all');
 ```
 #### Output
 ```
-	>> ReadText
+>> ReadText
 
-	out =
+out =
+{
+	[1,1] =
+
+	1
+	2
+	3
+
+	[1,2] =
 	{
-		[1,1] =
+	[1,1] = WebDev
+	[2,1] = Mikdore
+	[3,1] = Sathya
+}
 
-		1
-		2
-		3
+	[1,3] =
 
-		[1,2] =
-		{
-		[1,1] = WebDev
-		[2,1] = Mikdore
-		[3,1] = Sathya
-	}
+	 45
+	323
+	127
 
-		[1,3] =
-
-		 45
-		323
-		127
-
-	}
+}
 ```
 
 Note that `fopen` opens a file for reading/writing, and `fclose` closes the file when we’re done using it. Also, `%s` and `%d` corresponds to string and integer format, respectively. 
@@ -78,49 +78,49 @@ For data with headers and delimiters, importdata is more useful. It’s like an 
 #### Input File (data2.txt)
 [Courtesy of MathWorks][1]
 ```
-	Day1  Day2  Day3  Day4  Day5  Day6  Day7
-	95.01 76.21 61.54 40.57  5.79 20.28  1.53
-	23.11 45.65 79.19 93.55 35.29 19.87 74.68
-	60.68  1.85 92.18 91.69 81.32 60.38 44.51
-	48.60 82.14 73.82 41.03  0.99 27.22 93.18
-	89.13 44.47 17.63 89.36 13.89 19.88 46.60
+Day1  Day2  Day3  Day4  Day5  Day6  Day7
+95.01 76.21 61.54 40.57  5.79 20.28  1.53
+23.11 45.65 79.19 93.55 35.29 19.87 74.68
+60.68  1.85 92.18 91.69 81.32 60.38 44.51
+48.60 82.14 73.82 41.03  0.99 27.22 93.18
+89.13 44.47 17.63 89.36 13.89 19.88 46.60
 ```
 #### ImportNums.m
 ```
-	out = importdata('data2.txt', ' ', 1)
+out = importdata('data2.txt', ' ', 1)
 ```
 #### Output
 *Sorry if the text wrapped*
 ```
-	>> ImportNums
+>> ImportNums
 
-	out =
+out =
 
-	  scalar structure containing the fields:
+  scalar structure containing the fields:
 
-		data =
+	data =
 
-		   95.01000   76.21000   61.54000   40.57000    5.79000   20.28000    1.53000
-		   23.11000   45.65000   79.19000   93.55000   35.29000   19.87000   74.68000
-		   60.68000    1.85000   92.18000   91.69000   81.32000   60.38000   44.51000
-		   48.60000   82.14000   73.82000   41.03000    0.99000   27.22000   93.18000
-		   89.13000   44.47000   17.63000   89.36000   13.89000   19.88000   46.60000
+	   95.01000   76.21000   61.54000   40.57000    5.79000   20.28000    1.53000
+	   23.11000   45.65000   79.19000   93.55000   35.29000   19.87000   74.68000
+	   60.68000    1.85000   92.18000   91.69000   81.32000   60.38000   44.51000
+	   48.60000   82.14000   73.82000   41.03000    0.99000   27.22000   93.18000
+	   89.13000   44.47000   17.63000   89.36000   13.89000   19.88000   46.60000
 
-		textdata =
-		{
-		  [1,1] = Day1  Day2  Day3  Day4  Day5  Day6  Day7
-		}
+	textdata =
+	{
+	  [1,1] = Day1  Day2  Day3  Day4  Day5  Day6  Day7
+	}
 
-		colheaders =
-		{
-		  [1,1] = Day1
-		  [1,2] = Day2
-		  [1,3] = Day3
-		  [1,4] = Day4
-		  [1,5] = Day5
-		  [1,6] = Day6
-		  [1,7] = Day7
-		}
+	colheaders =
+	{
+	  [1,1] = Day1
+	  [1,2] = Day2
+	  [1,3] = Day3
+	  [1,4] = Day4
+	  [1,5] = Day5
+	  [1,6] = Day6
+	  [1,7] = Day7
+	}
 ```
 
 Keep in mind that the delimiter is the character that separates the values. Here, it is the space, but some files may use commas or dashes to separate data.  
@@ -201,109 +201,109 @@ This program will create some variables, store some of them, and retrieve them.
 
 #### SaveNLoad.m
 ```
-	clear;
+clear;
 
-	a = 'Heads, '
-	b = 'Shoulders, '
-	c = 'Knees, '
-	d = 'and Toes'
+a = 'Heads, '
+b = 'Shoulders, '
+c = 'Knees, '
+d = 'and Toes'
 
-	e = [a b c d];
+e = [a b c d];
 
-	disp(e)
-	disp('')
+disp(e)
+disp('')
 
-	disp('Should show original a, b, c, d, and e values:')
-	whos()
+disp('Should show original a, b, c, d, and e values:')
+whos()
 
-	save('bodyparts', 'b', 'c', 'd', 'e');
+save('bodyparts', 'b', 'c', 'd', 'e');
 
-	clear;
+clear;
 
-	disp('Should show nothing:')
+disp('Should show nothing:')
 
-	whos()
+whos()
 
-	disp('')
+disp('')
 
-	load('bodyparts', 'c', 'd', 'e');
+load('bodyparts', 'c', 'd', 'e');
 
-	disp('Should only show c, d, and e:')
+disp('Should only show c, d, and e:')
 
-	whos()
+whos()
 
-	disp('')
+disp('')
 
-	disp(strcat('Original: ', e))
-	disp('')
+disp(strcat('Original: ', e))
+disp('')
 
-	a = 'Tails, '
-	b = e(8:18)
-	e = [a b c d];
+a = 'Tails, '
+b = e(8:18)
+e = [a b c d];
 
-	disp('')
-	disp(strcat('New: ', e))
-	disp('')
+disp('')
+disp(strcat('New: ', e))
+disp('')
 
-	disp('Should show new a value, and original b, c, d, and e values:')
+disp('Should show new a value, and original b, c, d, and e values:')
 
-	whos()
+whos()
 ```
 #### Output
 ```
-	>> SaveNLoad
+>> SaveNLoad
 
-	a = Heads,
-	b = Shoulders,
-	c = Knees,
-	d = and Toes
-	Heads, Shoulders, Knees, and Toes
+a = Heads,
+b = Shoulders,
+c = Knees,
+d = and Toes
+Heads, Shoulders, Knees, and Toes
 
-	Should show original a, b, c, d, and e values:
-	Variables in the current scope:
+Should show original a, b, c, d, and e values:
+Variables in the current scope:
 
-	   Attr Name        Size                     Bytes  Class
-	   ==== ====        ====                     =====  =====
-			a           1x7                          7  char
-			b           1x11                        11  char
-			c           1x7                          7  char
-			d           1x8                          8  char
-			e           1x33                        33  char
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  =====
+		a           1x7                          7  char
+		b           1x11                        11  char
+		c           1x7                          7  char
+		d           1x8                          8  char
+		e           1x33                        33  char
 
-	Total is 66 elements using 66 bytes
+Total is 66 elements using 66 bytes
 
-	Should show nothing:
+Should show nothing:
 
-	Should only show c, d, and e:
-	Variables in the current scope:
+Should only show c, d, and e:
+Variables in the current scope:
 
-	   Attr Name        Size                     Bytes  Class
-	   ==== ====        ====                     =====  =====
-			c           1x7                          7  char
-			d           1x8                          8  char
-			e           1x33                        33  char
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  =====
+		c           1x7                          7  char
+		d           1x8                          8  char
+		e           1x33                        33  char
 
-	Total is 48 elements using 48 bytes
+Total is 48 elements using 48 bytes
 
-	Original:Heads, Shoulders, Knees, and Toes
+Original:Heads, Shoulders, Knees, and Toes
 
-	a = Tails,
-	b = Shoulders,
+a = Tails,
+b = Shoulders,
 
-	New:Tails, Shoulders, Knees, and Toes
+New:Tails, Shoulders, Knees, and Toes
 
-	Should show new a value, and original b, c, d, and e values:
-	Variables in the current scope:
+Should show new a value, and original b, c, d, and e values:
+Variables in the current scope:
 
-	   Attr Name        Size                     Bytes  Class
-	   ==== ====        ====                     =====  =====
-			a           1x7                          7  char
-			b           1x11                        11  char
-			c           1x7                          7  char
-			d           1x8                          8  char
-			e           1x33                        33  char
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  =====
+		a           1x7                          7  char
+		b           1x11                        11  char
+		c           1x7                          7  char
+		d           1x8                          8  char
+		e           1x33                        33  char
 
-	Total is 66 elements using 66 bytes
+Total is 66 elements using 66 bytes
 ```
 #### bodyparts file
 ```
