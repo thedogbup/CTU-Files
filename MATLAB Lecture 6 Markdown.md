@@ -1,7 +1,7 @@
 # MATLAB Lecture 6
 ## File Handling
 ### Notes by bup, July 22nd 2020, for CTU
-
+[A rich format version is avaliable here.](https://docs.google.com/document/d/e/2PACX-1vTbc6L6riOqENycdWfhm2Ev_H3ORDwvHerVo5tq1FCw5JypK2lHnD0kkziNA2VLMLQ1hkWz7c4VPSrW/pub)
 ***
 
 # Importing Data
