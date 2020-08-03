@@ -28,7 +28,7 @@ legend('sin(x)', 'cos(x)')
 When you run the code, the output looks like this:
 
 #### MATLAB Graph
-![MATLAB Graph][https://cdn.discordapp.com/attachments/539880565185183754/739966340395434035/unknown.png]
+![MATLAB Graph](https://cdn.discordapp.com/attachments/539880565185183754/739966340395434035/unknown.png)
 
 #### Octave Graph
-![Octave Graph][https://cdn.discordapp.com/attachments/539880565185183754/739966463049465856/unknown.png]
+![Octave Graph](https://cdn.discordapp.com/attachments/539880565185183754/739966463049465856/unknown.png)
