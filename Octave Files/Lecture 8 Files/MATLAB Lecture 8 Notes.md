@@ -32,3 +32,11 @@ When you run the code, the output looks like this:
 
 #### Octave Graph
 ![Octave Graph](https://cdn.discordapp.com/attachments/539880565185183754/739966463049465856/unknown.png)
+
+The important takeaways from the code:
+* ``title`` sets the title of the graph, on the top.
+* ``xlabel`` and ``ylabel`` provide the axis labels.
+* ``legend``, like it should, indicates which line is which.
+* ``plot`` is the basic 2D plotting command.
+
+The tools in the window allow you to make temporary changes to the graph, like adding in text, panning, and zooming in or out on the graph. You can also save the graphs as images or other relevant formats.
