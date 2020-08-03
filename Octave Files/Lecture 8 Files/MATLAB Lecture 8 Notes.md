@@ -7,7 +7,7 @@
 ## Summary
 One of the most prized features of MATLAB is the ability to process large amounts of data and display them in a way that is easy to analyze. When you are presenting data in the form of a chart, the goal is to convey the information in the best way possible for your audience to understand. Accordingly, MATLAB provides a great amount of tools and options to customize your charts to the fullest extent.
 
-## Window Properties
+## Graph Elements
 Both MATLAB and Octave will open a new window when a graph is plotted. Some elements that are present in most graphs are shown:
 
 #### ExamplePlot.m
@@ -40,3 +40,5 @@ The important takeaways from the code:
 * ``plot`` is the basic 2D plotting command.
 
 The tools in the window allow you to make temporary changes to the graph, like adding in text, panning, and zooming in or out on the graph. You can also save the graphs as images or other relevant formats.
+
+## Command Details
